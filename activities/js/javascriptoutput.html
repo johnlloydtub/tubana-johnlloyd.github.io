@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+ <html>
+
+<head>
+<script>
+	function hello() {
+	document.getElementById('sample').innerHTML = "Hello JS";
+	document.getElementById('sample').style.backgroundColor="#000000"; 
+	document.getElementById('sample').style.color ="yellow";
+}
+</script>
+</head>
+<body>
+	<button type="button" onclick="hello()">Clickme</button>
+	<p id="sample" onclick="hello()">When you click the button above, the text will change.</p>
+</body>
+</html>

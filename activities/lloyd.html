@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+<style>
+    body{
+        background-color: rgb(53, 42, 209);
+    }
+    
+    .container{
+        color: rgb(22, 23, 24);
+    }
+    .form {
+    border-style: none;
+    box-shadow: 0 0 10px #c261a6, 0 0 20px #bf96bc, 0 0 30px #81314d, 0 0 40px #4b0f28, 0 0 70px #deb6d8, 0 0 80px #d7afc8, 0 0 100px #8d7387;
+    margin-left: 550px;
+    margin-right: 550px;
+    margin-top: 120px;
+    background-size: cover;
+}
+
+    h1{
+        color:white;
+        border-style: solid;
+        border-width: 20px 5px;
+    }
+    p:hover {
+     color: #0a0a0a;
+     background-color:rgb(239, 13, 13)
+    }
+    button:hover{
+    color: #0a0a0a;
+     background-color:rgb(239, 13, 13)
+    }
+    button:active {
+  color: #a41af3;
+  background-color:rgb(52, 170, 216)
+}
+</style>
+
+</head>
+
+<body>
+    <div class="container">
+        <forms class="data">
+            <table>
+                <div class="form">
+                <center>
+                    <h1>Personal Information</h1>
+                    <div class="fnamess">  <p style="color: rgb(253, 253, 253);">First Name:</p></div>
+                    <input id="count" onkeydown="charcount()" class="lloyd"><br><br>
+                    <p style="color: rgb(255, 255, 255);">Last Name:</p> <input id="count"  onkeydown="charcount ()" class="lloyd"><br><br>
+                    <p style="color: rgb(255, 255, 255);">Birth Year:</p> <input id="data2" type="number" class="lloyd"><br><br>
+                    <button type="submit" id="submit" onclick="btn()">Submit</button><br><br>
+                  First Name is pressed <span id="charcount">0</span> Times<br><br>
+                    Your Age is <span id="minus">0</span>
+                </center>
+                </div>
+            </table>
+        </forms>
+    </div>
+    <script>
+       
+
+        function btn() {
+            alert("Your Information is Saved.")
+        }
+
+        
+        function charcount() {
+            var charcount = document.getElementById("charcount").innerHTML;
+
+            document.getElementById("charcount").innerHTML = Number(charcount) + 1;
+        }
+
+
+        var data2 = document.querySelector('#data2');
+        var minus = document.getElementById('minus');
+        var y = 2023
+
+        data2.addEventListener('keyup', function () {
+            var val = data2.value;
+            minus.innerText = (y - val);
+        });
+        
+
+    </script>
+</body>
+</html>
